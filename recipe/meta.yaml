@@ -10,7 +10,7 @@ source:
   sha256: 07ace2238fc8bf43b6dba891aa3e3019cd62d54a37463ff2a3902f628cce61ae
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - py-build-cmake = py_build_cmake.cli:cli
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
