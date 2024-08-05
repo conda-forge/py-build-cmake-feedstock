@@ -1,13 +1,13 @@
 {% set name = "py-build-cmake" %}
-{% set version = "0.1.8" %}
+{% set version = "0.2.0.dev20240805" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py-build-cmake-{{ version }}.tar.gz
-  sha256: f90b8e2b9a273670fe7251e744eaede75132e798e5402477282a47012b2e5bdb
+  url: https://github.com/tttapa/py-build-cmake/archive/7ab73da351c7140f06d727a8705bece4cf544cd9.tar.gz
+  sha256: 07ace2238fc8bf43b6dba891aa3e3019cd62d54a37463ff2a3902f628cce61ae
 
 build:
   number: 0
@@ -19,15 +19,17 @@ build:
 requirements:
   host:
     - python >=3.7
-    - distlib
-    - flit-core >=3.7,<4
+    - pyproject-metadata >=0.7.1,<0.8.dev0
+    - distlib >=0.3.5,<0.4.dev0
     - tomli >=1.2.3,<3
+    - lark >=1.1.9,<2
     - pip
   run:
     - python >=3.7
+    - pyproject-metadata >=0.7.1,<0.8.dev0
     - distlib >=0.3.5,<0.4.dev0
-    - flit-core >=3.7,<4
     - tomli >=1.2.3,<3
+    - lark >=1.1.9,<2
     - click >=8.1.3,<8.2.dev0
 
 test:
