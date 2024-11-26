@@ -21,7 +21,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - py-build-cmake
+    - setuptools
   run:
     - python >={{ python_min }}
     - distlib >=0.3.5,<0.4.dev0
